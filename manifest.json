@@ -1,0 +1,21 @@
+{
+	"name": "Blocking Websites",
+	"version": "0.1",
+	"description": "Block websites during specific hours of the day",
+	"icons": { 
+		"16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png" 
+	},
+	"content_scripts": [{
+    	"matches": [
+			// websites you wish to block
+			// examples for the format: https://developer.chrome.com/extensions/match_patterns
+      		"*://*.youtube.com/*",
+			"*://*.netflix.com/*"
+    	],
+		"run_at": "document_start",
+    	"js": ["content.js"]
+  }],
+	"manifest_version": 2
+}
